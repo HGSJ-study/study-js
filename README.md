@@ -6,5 +6,7 @@ study for JS basic
 
 ## Directories
 
-- basic
+- [basic](https://github.com/HGSJ-study/study-js/tree/main/basic)
     - 자바스크립트 기본
+- [code_quality](https://github.com/HGSJ-study/study-js/tree/main/code_quality)
+    - 코드 품질
