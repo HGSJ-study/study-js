@@ -2,19 +2,29 @@
 <html>
 <body>
   <script>
-    let num = 123,
-      bigInt = 123456n,
-      str = 'Hello',
-      isTrue = true,
-      isNull = null,
-      isUndefined;
+    let num = 123;
+    let bigInt = 123456n;
+    let float = 1.234;
+    let str = 'Hello';
+    let isTrue = true;
+    let isNull = null;
+    let isUndefined;
+    let sym = Symbol();
+
+    let arr = []
+    let obj = {}
     
-    alert(`123: ${typeof num}`)
-    alert(`123456n: ${typeof bigInt}`)
-    alert(`Hello: ${typeof str}`)
-    alert(`true: ${typeof isTrue}`)
-    alert(`null: ${typeof isNull}`)
-    alert(`There is no value: ${typeof isUndefined}`)
+    alert(`123: ${typeof num}`);
+    alert(`123456n: ${typeof bigInt}`);
+    alert(`1.234: ${typeof float}`)
+    alert(`Hello: ${typeof str}`);
+    alert(`true: ${typeof isTrue}`);
+    alert(`null: ${typeof isNull}`);
+    alert(`There is no value: ${typeof isUndefined}`);
+    alert(`sym: ${typeof sym}`)
+
+    alert(`arr: ${typeof arr}`)
+    alert(`obj: ${typeof obj}`)
   </script>
 </body>
 </html>
