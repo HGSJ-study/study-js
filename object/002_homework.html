@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // https://ko.javascript.info/object#ref-1538
+    // 객체가 비어있는지 확인하기
+    
+    function isEmpty(in_obj){
+      // case 1 - sangjin case
+      if(Object.keys(in_obj).length > 0){
+        return false;
+      }else{
+        return true;
+      }
+      
+      // case 2 - answer
+      for(key in in_obj){
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

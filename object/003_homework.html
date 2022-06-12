@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // https://ko.javascript.info/object#ref-1539
+    // 변하지 않는 객체?
+
+    const user = {
+      name: "John"
+    };
+    // 아래 코드는 에러 없이 실행될까요?
+    user.name = "Pete";
+
+    /* 
+        위의 코드는 에러 없이 실행됨
+        const는 user object에만 영향을 끼치므로
+        object 전체 값을 변경하는 경우가 아닌 특정 
+        property의 값이 변경되는 것은 가능
+    */
+    
+  </script>
+</body>
+</html>

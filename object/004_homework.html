@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // https://ko.javascript.info/object#ref-1540
+    // 프로퍼티 합계 구하기
+    
+
+    function sumAllMemberSalary(in_obj){
+      
+      
+      // case 1 - sangjin case
+      let total_salary = 0;
+      if(Object.keys(in_obj).length < 1){
+        return 0;
+      }
+
+      for(salary in in_obj){
+        total_salary += in_obj[salary];
+      }
+
+      return total_salary;
+
+      // case 2 - answer case
+      total_salary = 0;
+      for (let key in salaries) {
+        total_salary += salaries[key];
+      }
+
+      return total_salary;
+    }
+    
+    let sum = 0;
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
+    }
+
+    sum = sumAllMemberSalary(salaries);
+    alert("Members total salaries: "+sum);
+  </script>
+</body>
+</html>
