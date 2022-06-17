@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // OR
+    alert(true || true);  // true
+    alert(false || true);  // true
+    alert(true || false);  // true
+    alert(false || false);  // false, // 둘 다 false인 경우만!
+
+    if (1 || 0) {  // if(true || false) 와 동일하게 동작
+      alert('truthy!');
+    }
+
+    // 조건 중 '참' 테스트
+    let hour = 9;
+
+    if (hour < 10 || hour > 18) {
+      alert('Closed');
+    }
+
+    let hour2 = 12;
+    let isWeekend = true;
+
+    if (hour2 < 10 || hour2 > 18 || isWeekend) {
+      alert('Closed');  // weekend!
+    }
+
+    alert(1 || 0);  // 1
+    alert(null || 1);  // 1
+    alert(null || 0 || 1);  // 1
+    alert(undefined || null || 0);  // 0, 모두 falsy이므로 마지막 값 반환
+
+    // AND
+    let hour3 = 12;
+    let minute = 30;
+
+    if (hour3 === 12 && minute === 30) {
+      alert('12:30');
+    }
+
+    if (1 && 0) {  // 논리형으로 바뀌어 true && false가 된다.
+      alert('message');  // 실행되지 않음
+    }
+
+    // 첫 번째가 truthy면 두 번째를 반환.
+    alert(1 && 0);  // 0
+    alert(1 && 5);  // 5
+
+    // 첫 번째가 falsy면 두 번째는 무시.
+    alert(null && 5);  // null
+    alert(0 && '임의의 문자열'); // 0
+
+    // NOT
+    alert(!true);  // false
+    alert(!0);  // true
+
+    alert(!!"non-empty string");  // true
+    alert(!!null);  // false
+  </script>
+</body>
+</html>
