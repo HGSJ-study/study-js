@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    let year = prompt('ECMAScript-2015 명세는 몇 년도에?');
+
+    if (year < 2015) {
+      alert('UP');
+    } else if (year > 2015) {
+      alert('DOWN');
+    } else {
+      alert('정답!');
+    }
+
+    let accessAllowed;
+    let age = prompt('나이 입력');
+
+    if (age > 18) {
+      accessAllowed = true;
+    } else {
+      accessAllowed = false;
+    }
+
+    alert(accessAllowed);
+
+    accessAllowed = (age > 18) ? true : false;
+  </script>
+</body>
+</html>
