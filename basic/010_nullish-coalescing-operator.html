@@ -16,10 +16,10 @@
     alert(height ?? 100);  // 0, height에는 0이 할당(defined)
 
     // 우선순위
-    let height = null;
+    let heightNull = null;
     let width = null;
 
-    let area = (height ?? 100) * (width ?? 50);  // 괄호 추가
+    let area = (heightNull ?? 100) * (width ?? 50);  // 괄호 추가
     alert(area);  // 5000
 
     // 괄호가 없다면?
