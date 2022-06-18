@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // https://ko.javascript.info/object#ref-1541
+    // 프로퍼티 값 두 배로 부풀리기
+
+    function multiplyNumeric(in_obj) {
+      for(key in in_obj){
+        if(typeof(in_obj[key]) == "number"){
+          // case: sangjin
+          in_obj[key] = in_obj[key] * 2;
+          
+          // case: answer
+          //in_obj[key] *= 2;
+        }
+      }
+    }
+
+    let menu = {
+      width: 200,
+      height: 300,
+      title: "My menu"
+    };
+
+    multiplyNumeric(menu);
+
+    alert("width: "+menu.width+"\nheight: "+menu.height+"\ntitle: "+menu.title);
+  </script>
+</body>
+
+</html>
