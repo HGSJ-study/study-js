@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // find nickName
+    let firstName = null;
+    let lastName = null;
+    let nickName = "James";
+
+    alert(firstName ?? lastName ?? nickName ?? "익명의 사용자");  // James
+
+    // OR과의 차이
+    let height = 0;
+
+    alert(height || 100);  // 100, height는 falsy 취급
+    alert(height ?? 100);  // 0, height에는 0이 할당(defined)
+
+    // 우선순위
+    let height = null;
+    let width = null;
+
+    let area = (height ?? 100) * (width ?? 50);  // 괄호 추가
+    alert(area);  // 5000
+
+    // 괄호가 없다면?
+    // let wrongArea = height ?? (100 * width) ?? 50;
+
+    // 안전성 이슈
+    // let x = 1 && 2 ?? 3;  // SyntaxError
+
+    let y = (1 && 2) ?? 3;
+    alert(y);  // 2
+  </script>
+</body>
+</html>
