@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // 0, 1, 2 출력
+    let a = 0;
+    while (a < 3) {
+      alert(a);
+      a++;
+    }
+
+    // do-while
+    let b = 0;
+    do {
+      alert(b);
+      b++;
+    } while (b < 3);
+
+    // for
+    for (let c = 0; c < 3; c++) {
+      alert(c);
+    }
+
+    // for문 구체화
+    let d = 0;
+    if (d < 3) {alert(d); d++}
+    if (d < 3) {alert(d); d++}
+    if (d < 3) {alert(d); d++}
+    if (d < 3) {alert(d); d++}  // 실행 안됨
+
+    // for 구성 요소 생략
+    let e = 0;
+    for (; e < 3;) {
+      alert(e++);
+    }
+
+    // continue
+    for (let f = 0; f < 10; f ++) {
+      if (f % 2 === 0) continue;
+      alert(f); // 1, 3, 5, 7, 9
+    }
+
+    // label
+    outer: for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        alert(`(${i}) (${j})`);
+        break outer;
+      }
+    }
+  </script>
+</body>
+</html>
