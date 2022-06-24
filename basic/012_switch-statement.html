@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // switch
+    let a = 4;
+    switch (a) {
+      case 3:
+        alert( '비교하려는 값보다 작습니다.' );
+        break;
+      case 4:
+        alert( '비교하려는 값과 일치합니다.' );
+        break;
+      case 5:
+        alert( '비교하려는 값보다 큽니다.' );
+        break;
+      default:
+        alert( "어떤 값인지 파악이 되지 않습니다." );
+    }
+
+    // non-break
+    let b = 4;
+    switch (b) {
+      case 3:
+        alert( '비교하려는 값보다 작습니다.' );
+      case 4:
+        alert( '비교하려는 값과 일치합니다.' );  // 실행됨, 조건 일치
+      case 5:
+        alert( '비교하려는 값보다 큽니다.' );  // 실행됨, case 4에 break문이 없기 때문
+      default:
+        alert( "어떤 값인지 파악이 되지 않습니다." );  // 실행됨, case 5에 break문이 없기 때문
+    }
+
+    // 표현식을 인수로 갖는 switch
+    let c = "1";
+    let d = 0;
+
+    switch (+c) {
+      case d + 1:
+        alert("표현식 +a는 1, 표현식 b+1는 1이므로 이 코드가 실행됩니다.");
+        break;
+
+      default:
+        alert("이 코드는 실행되지 않습니다.");
+    }
+
+    // 여러 case 묶기
+    let e = 3;
+    switch (e) {
+      case 3:
+      case 5:
+        alert('case 3과 case 5는 동일한 메시지 출력')
+    }
+
+    // switch의 자료형 일치 비교
+    let arg = prompt("값을 입력하세요");
+    switch (arg) {
+      case '0':
+      case '1':
+        alert( '0이나 1을 입력' );
+        break;
+
+      case '2':
+        alert( '2를 입력' );
+        break;
+
+      case 3:
+        alert( '이 코드는 절대 실행되지 않음!' );
+        break;
+
+      default:
+        alert( '알 수 없는 값을 입력' );
+    }
+  </script>
+</body>
+</html>
