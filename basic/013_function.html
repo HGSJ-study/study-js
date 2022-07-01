@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // 1. 지역 변수
+    function showMessage() {
+      let message = "안녕하세요!";
+
+      alert( message );
+    }
+
+    showMessage();
+    alert( message );  // ReferenceError
+
+    // // 2. 외부 변수
+    // let userName = 'John';
+
+    // function showMessage() {
+    //   let userName = "Bob";
+
+    //   let message = 'Hello, ' + userName;
+    //   alert(message);
+    // }
+
+    // showMessage();  // Hello, Bob
+    // alert( userName );  // John
+
+    // // 3. 매개 변수
+    // function showMessage(from, text) {
+    //   alert(`${from}: ${text}`);
+    // }
+
+    // showMessage('Ann', 'Hello!');
+
+    // 4. 기본 값(1)
+    // function showMessage(from, text = "no text given") {
+    //   alert(`${from}: ${text}`);
+    // }
+
+    // showMessage("Ann"); // Ann: no text given
+
+    // // 5. 기본 값(2)
+    // function showMessage(text) {
+    //   if (text === undefined) {
+    //     text = '빈 문자열';
+    //   }
+
+    //   alert(text);
+    // }
+
+    // showMessage(); // 빈 문자열
+
+    // 6. return
+    // function isTrue(value) {
+    //   if (value === true) {
+    //     return;
+    //   }
+    //   alert('false!');
+    // }
+    // isTrue(true);
+  </script>
+</body>
+</html>
