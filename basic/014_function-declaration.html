@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+    // 1. 함수 선언과 표현
+    // function sayHi() {
+    //   alert( "Hello" );
+    // }
+
+    // let sayHi = function() {
+    //   alert( "Hello" );
+    // };
+
+    // sayHi();
+
+    // 2. 콜백
+    function ask(question, yes, no) {
+      if (confirm(question)) yes()
+      else no();
+    }
+
+    ask (
+      '동의하십니까?',
+      function() {alert('동의');},
+      function() {alert('취소');}
+    );
+  </script>
+</body>
+</html>
